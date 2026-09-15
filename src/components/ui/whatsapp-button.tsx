@@ -6,7 +6,7 @@ import { useState } from 'react';
 export function WhatsAppButton() {
     const [isHovered, setIsHovered] = useState(false);
     const phoneNumber = '919798836199';
-    const message = encodeURIComponent('Hi! I\'m interested in building a website with Indivio.');
+    const message = encodeURIComponent("Hi Indivio Studio! I'm interested in discussing a project.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (

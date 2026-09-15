@@ -65,7 +65,7 @@ export function Contact() {
 
     const openWhatsApp = () => {
         const text = encodeURIComponent(
-            `Hi Indivio! I'm interested in your services.\n\nName: ${formData.name || 'Not provided'}\nEmail: ${formData.email || 'Not provided'}\nMessage: ${formData.message || 'I would like to discuss a project.'}`
+            `Hi Indivio Studio! I'm interested in your services.\n\nName: ${formData.name || 'Not provided'}\nEmail: ${formData.email || 'Not provided'}\nMessage: ${formData.message || 'I would like to discuss a project.'}`
         );
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
     };

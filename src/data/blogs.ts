@@ -19,8 +19,8 @@ export const blogPosts: BlogPost[] = [
     },
     {
         slug: 'web-development-bihar-for-india',
-        title: 'Built in Bihar, Serving India: How Indivio Delivers Premium Web Solutions',
-        excerpt: 'You don\'t need an agency in Bangalore to get a world-class website. How our Bihar-based team is delivering premium, custom digital solutions to businesses across India.',
+        title: 'Built in Bihar, Serving India: How Indivio Studio Delivers Premium Web & App Solutions',
+        excerpt: 'You don\'t need an agency in Bangalore to get a world-class website or app. How our Bihar-based engineering studio is delivering premium, custom digital solutions to businesses across India.',
         category: 'Business',
         readTime: '5 min read',
         date: '2026-03-02',

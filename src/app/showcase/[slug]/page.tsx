@@ -5,6 +5,7 @@ import { showcaseProjects, ShowcaseProject } from '@/data/showcase';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Smartphone, Globe, Check, Award, Calendar, User, Code2 } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
+import { siteConfig } from '@/lib/siteConfig';
 
 // Next.js dynamic route compatibility helper
 interface PageProps {
@@ -23,17 +24,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     
     if (!project) {
         return {
-            title: 'Project Not Found | Indivio',
+            title: 'Project Not Found | Indivio Studio',
         };
     }
 
+    const url = `${siteConfig.url}/showcase/${project.slug}`;
+
     return {
-        title: `${project.title} - Case Study | Indivio`,
+        title: `${project.title} - Case Study | Indivio Studio`,
         description: project.shortDescription,
+        alternates: {
+            canonical: url,
+        },
         openGraph: {
-            title: `${project.title} - Case Study | Indivio`,
+            title: `${project.title} - Case Study | Indivio Studio`,
             description: project.shortDescription,
+            url,
             type: 'article',
+            images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: project.title }],
         }
     };
 }
@@ -66,7 +74,8 @@ export default async function ShowcaseDetailPage({ params }: PageProps) {
         },
         'author': {
             '@type': 'Organization',
-            'name': 'Indivio'
+            'name': siteConfig.name,
+            'url': siteConfig.url
         }
     };
 

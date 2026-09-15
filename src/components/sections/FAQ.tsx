@@ -24,7 +24,7 @@ const faqs = [
     },
     {
         question: 'Do you offer services outside Nirmali, Bihar?',
-        answer: 'Yes! While Indivio started in Nirmali, Bihar, we proudly serve small businesses, schools, and coaching centers across tier 2 and tier 3 cities all over India.',
+        answer: 'Yes! While Indivio Studio was founded in Nirmali, Bihar, we proudly engineer digital solutions for businesses, schools, startups, and coaching centers across tier 1, tier 2, and tier 3 cities all over India.',
     },
     {
         question: 'What if I need changes after delivery?',

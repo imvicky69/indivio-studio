@@ -38,7 +38,7 @@ export default function Home() {
       <Services />
       <div style={{ position: 'relative', height: '300px' }}>
         <TextPressure
-          text="INDIVIO"
+          text="INDIVIO STUDIO"
           flex
           alpha={false}
           stroke={false}

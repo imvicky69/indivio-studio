@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Antigravity } from '@/components/ui/Antigravity';
 
-const FULL_TEXT = 'Premium Websites, Mobile Apps & Coaching ERPs.';
+const FULL_TEXT = 'Web Apps, Mobile Apps & Custom Software.';
 const TYPING_SPEED = 45; // ms per character
 
 function TypewriterHeading() {
@@ -30,7 +30,7 @@ function TypewriterHeading() {
     }, []);
 
     // Find the gradient portion to style it
-    const highlightText = 'Websites, Mobile Apps & Coaching ERPs.';
+    const highlightText = 'Mobile Apps & Custom Software.';
     const gradientStart = FULL_TEXT.indexOf(highlightText);
     const gradientEnd = gradientStart + highlightText.length;
 
@@ -116,7 +116,7 @@ export function Hero() {
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/5 mb-8">
                         <div className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse" />
                         <span className="text-xs text-[var(--accent)] font-medium tracking-wide uppercase">
-                            Now Accepting Projects for 2026
+                            Indivio Studio • Digital Product & Engineering Studio
                         </span>
                     </div>
                 </Reveal>
@@ -125,8 +125,8 @@ export function Hero() {
 
                 <Reveal delay={0.2}>
                     <p className="text-base md:text-lg text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-                        We design and engineer high-performance native apps, custom ERP software, and stunning web solutions. 
-                        Scaling coaching institutes and growing businesses from Nirmali, Bihar to all of India.
+                        Indivio Studio designs and engineers high-performance native mobile apps, custom ERP platforms, and scalable web solutions. 
+                        Scaling coaching institutes and ambitious businesses from Nirmali, Bihar to all of India.
                     </p>
                 </Reveal>
 

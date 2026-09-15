@@ -38,7 +38,7 @@ export function Navbar() {
                 <Link href="/" className="relative h-8 w-28 group">
                     <Image
                         src="/images/logo.png"
-                        alt="Indivio - Software Company in Nirmali Bihar"
+                        alt="Indivio Studio - Digital Product & Software Studio"
                         fill
                         className="object-contain group-hover:opacity-80 transition-opacity"
                         priority

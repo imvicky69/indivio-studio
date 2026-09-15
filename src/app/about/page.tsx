@@ -18,7 +18,7 @@ function AboutHero() {
                     <Reveal>
                         <p className="text-sm text-[var(--accent)] tracking-wide uppercase mb-6 font-semibold flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse" />
-                            Behind Indivio
+                            Behind Indivio Studio
                         </p>
                     </Reveal>
                     <Reveal delay={0.1}>
@@ -28,7 +28,7 @@ function AboutHero() {
                     </Reveal>
                     <Reveal delay={0.2}>
                         <p className="text-lg text-muted leading-relaxed max-w-2xl">
-                            We exist to bridge the technology gap. From custom software to mobile apps and intelligent school ERPs, we bring world-class digital infrastructure to Tier-2 and Tier-3 cities across India.
+                            We exist to bridge the technology gap. From custom software to native mobile apps and intelligent school ERPs, we bring world-class digital engineering to businesses and educational institutions across India.
                         </p>
                     </Reveal>
                 </div>
@@ -50,7 +50,7 @@ function FounderProfile() {
                         <div className="relative aspect-square w-full max-w-sm rounded-full overflow-hidden border-4 border-default shadow-2xl group mb-6 z-10">
                             <Image
                                 src="/images/vikky-raja.jpg"
-                                alt="Vikky Raja - Founder of Indivio | Student Pilot and Software Engineer"
+                                alt="Vikky Raja - Founder of Indivio Studio | Student Pilot and Software Engineer"
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                             />
@@ -73,13 +73,13 @@ function FounderProfile() {
                         <Reveal delay={0.1}>
                             <div className="space-y-6 text-muted leading-relaxed">
                                 <p>
-                                    My journey didn't start in a massive corporate tech hub—it started as a freelance developer balancing code with aviation. As a Student Pilot, I learned the importance of precision, architecture, and flawless execution. I bring that exact same discipline to software development.
+                                    My journey didn&apos;t start in a massive corporate tech hub—it started as a freelance developer balancing code with aviation. As a Student Pilot, I learned the importance of precision, architecture, and flawless execution. I bring that exact same discipline to software engineering.
                                 </p>
                                 <p>
-                                    What began as building small websites for local shops in Bihar quickly scaled into **Indivio**. I realized that passionate business owners and coaching institutes in growing cities were being left behind by expensive, gatekept technology.
+                                    What began as building small websites for local businesses in Bihar quickly scaled into **Indivio Studio**. I realized that passionate business owners, startups, and coaching institutes in growing cities were being left behind by overpriced, outdated technology.
                                 </p>
                                 <p>
-                                    Today, I personally oversee the architecture of our elite **Mobile Apps**, highly scalable **Web Platforms**, and our flagship **Indivio Campus ERP** systems.
+                                    Today, I personally oversee the architecture of our elite **Mobile Apps**, highly scalable **Web Platforms**, and our flagship **Indivio Studio Campus ERP** systems.
                                 </p>
                             </div>
                         </Reveal>
@@ -134,7 +134,7 @@ function Expertise() {
                     </Reveal>
                     <Reveal delay={0.1}>
                         <p className="text-muted text-base">
-                            We don't just build websites; we build the digital infrastructure that lets your business operate at scale without friction.
+                            We don&apos;t just build websites; we build the digital infrastructure that lets your business operate at scale without friction.
                         </p>
                     </Reveal>
                 </div>
@@ -166,7 +166,7 @@ const workingStyles = [
     {
         icon: Users,
         title: 'Founder-Led Communication',
-        description: 'When you work with Indivio, you speak directly with the engineering lead. No generic project managers or lost-in-translation delays.',
+        description: 'When you work with Indivio Studio, you speak directly with the engineering lead. No generic project managers or lost-in-translation delays.',
     },
     {
         icon: Target,
@@ -176,12 +176,12 @@ const workingStyles = [
     {
         icon: Rocket,
         title: 'Built for Scale',
-        description: 'We use the exact same technology stack (React, Next.js, Cloud architectures) that Silicon Valley startups use to handle millions of users.',
+        description: 'We use the exact same technology stack (React, Next.js, Cloud architectures) that high-growth global startups use to handle massive traffic.',
     },
     {
         icon: Heart,
         title: 'Uncompromising Quality',
-        description: 'We refuse to ship templates. Every pixel is customized for your specific brand identity and business constraints.',
+        description: 'We refuse to ship cookie-cutter templates. Every pixel and database query is customized for your specific business requirements.',
     },
 ];
 
@@ -192,7 +192,7 @@ function WorkingStyle() {
                 <div className="max-w-2xl mb-16">
                     <Reveal>
                         <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 tracking-tight">
-                            The Indivio Standard
+                            The Indivio Studio Standard
                         </h2>
                     </Reveal>
                     <Reveal delay={0.1}>

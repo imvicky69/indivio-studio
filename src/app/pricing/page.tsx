@@ -681,7 +681,7 @@ function PricingComparison() {
                                 <thead>
                                     <tr className="border-b border-default">
                                         <th className="px-6 py-4 text-xs font-medium text-muted uppercase tracking-wider"></th>
-                                        <th className="px-6 py-4 text-xs font-semibold text-foreground uppercase tracking-wider">Indivio</th>
+                                        <th className="px-6 py-4 text-xs font-semibold text-foreground uppercase tracking-wider">Indivio Studio</th>
                                         <th className="px-6 py-4 text-xs font-medium text-muted uppercase tracking-wider">Freelancer</th>
                                         <th className="px-6 py-4 text-xs font-medium text-muted uppercase tracking-wider">Agency</th>
                                     </tr>

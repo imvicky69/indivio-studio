@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { siteConfig } from '@/lib/siteConfig';
 
 export const dynamic = 'force-static';
 
@@ -7,8 +8,8 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: [],
+            disallow: ['/api/'],
         },
-        sitemap: 'https://indivio.in/sitemap.xml',
+        sitemap: `${siteConfig.url}/sitemap.xml`,
     };
 }

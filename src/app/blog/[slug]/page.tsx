@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blogs';
 import ArticleClient from './ArticleClient';
+import { siteConfig } from '@/lib/siteConfig';
 
 export async function generateStaticParams() {
     return blogPosts.map((post) => ({
@@ -19,15 +20,14 @@ export async function generateMetadata({
 
     if (!post) {
         return {
-            title: 'Not Found',
+            title: 'Not Found | Indivio Studio',
         };
     }
 
-    const baseUrl = 'https://indivio.in';
-    const url = `${baseUrl}/blog/${post.slug}`;
+    const url = `${siteConfig.url}/blog/${post.slug}`;
 
     return {
-        title: `${post.title} | Indivio Blog`,
+        title: `${post.title} | Indivio Studio Blog`,
         description: post.excerpt,
         alternates: {
             canonical: url,
@@ -38,15 +38,15 @@ export async function generateMetadata({
             url,
             type: 'article',
             publishedTime: post.date,
-            authors: ['Indivio'],
-            siteName: 'Indivio',
-            images: [{ url: '/images/indivio.png', width: 1200, height: 630, alt: post.title }],
+            authors: [siteConfig.name],
+            siteName: siteConfig.name,
+            images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: post.title }],
         },
         twitter: {
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt,
-            images: ['/images/indivio.png'],
+            images: [siteConfig.ogImage],
         },
     };
 }
@@ -63,8 +63,7 @@ export default async function BlogArticlePage({
         notFound();
     }
 
-    const baseUrl = 'https://indivio.in';
-    const url = `${baseUrl}/blog/${post.slug}`;
+    const url = `${siteConfig.url}/blog/${post.slug}`;
 
     // Article schema for rich results
     const jsonLd = {
@@ -76,18 +75,18 @@ export default async function BlogArticlePage({
         },
         headline: post.title,
         description: post.excerpt,
-        image: 'https://indivio.in/images/indivio.png',
+        image: `${siteConfig.url}/images/indivio.png`,
         author: {
             '@type': 'Organization',
-            name: 'Indivio',
-            url: baseUrl,
+            name: siteConfig.name,
+            url: siteConfig.url,
         },
         publisher: {
             '@type': 'Organization',
-            name: 'Indivio',
+            name: siteConfig.name,
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://indivio.in/images/logo.png',
+                url: `${siteConfig.url}/images/logo.png`,
             },
         },
         datePublished: post.date,

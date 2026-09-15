@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-    title: "Pricing",
-    description: "Transparent, flexible pricing for websites and web apps. Starter from ₹15,000, Growth from ₹40,000, or custom quotes for complex projects.",
-    keywords: ["website cost India", "web development pricing", "affordable website India", "website price India", "custom website quote"],
+    title: "Pricing Plans | Transparent Software & App Development Cost",
+    description: "Transparent, flexible pricing for websites, web applications, and mobile apps by Indivio Studio. Starter from ₹15,000, Growth from ₹35,000, or tailored custom quotes.",
+    keywords: [
+        "website cost India",
+        "web development pricing India",
+        "mobile app development cost",
+        "affordable website India",
+        "school ERP pricing",
+        "custom website quote",
+        "Indivio Studio pricing",
+    ],
     alternates: {
-        canonical: "https://indivio.in/pricing",
+        canonical: `${siteConfig.url}/pricing`,
     },
     openGraph: {
-        title: "Pricing | Indivio",
-        description: "Affordable website development packages starting from ₹15,000. Transparent pricing, no hidden fees.",
-        images: [{ url: "/images/indivio.png", width: 1200, height: 630, alt: "Indivio Pricing" }],
+        title: "Pricing Plans | Indivio Studio",
+        description: "Affordable, transparent website and app development packages starting from ₹15,000. No hidden charges.",
+        url: `${siteConfig.url}/pricing`,
+        images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: "Indivio Studio Pricing" }],
     },
 };
 

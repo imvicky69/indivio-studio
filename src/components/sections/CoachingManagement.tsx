@@ -40,7 +40,7 @@ export default function CoachingManagement() {
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/5 mb-6">
                                 <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse" />
                                 <span className="text-sm font-medium text-[var(--accent)]">
-                                    Indivio Campus Solution
+                                    Indivio Studio Campus Suite
                                 </span>
                             </div>
                         </Reveal>
@@ -93,7 +93,7 @@ export default function CoachingManagement() {
                                     <div className="w-3 h-3 rounded-full bg-green-500/80" />
                                 </div>
                                 <div className="mx-auto w-1/2 h-6 bg-[var(--background)] rounded-md border border-default flex items-center justify-center">
-                                    <span className="text-[10px] text-muted font-mono">campus.indivio.in</span>
+                                    <span className="text-[10px] text-muted font-mono">campus.indiviostudio.in</span>
                                 </div>
                             </div>
 

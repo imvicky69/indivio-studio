@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/ui/reveal';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, CheckCircle2 } from 'lucide-react';
+import { siteConfig } from '@/lib/siteConfig';
 
 export async function generateStaticParams() {
     return locations.map((loc) => ({
@@ -21,12 +22,12 @@ export async function generateMetadata({
     const location = locations.find((l) => l.slug === p.city);
 
     if (!location) {
-        return { title: 'Location Not Found' };
+        return { title: 'Location Not Found | Indivio Studio' };
     }
 
-    const title = `Software & Web Development Company in ${location.name}, ${location.region} | Indivio`;
-    const description = `Looking for the best web development and ${location.focus.toLowerCase()} software in ${location.name}? Indivio provides premium digital solutions. ${location.shortDescription}`;
-    const url = `https://indivio.in/locations/${location.slug}`;
+    const title = `Software & App Development Studio in ${location.name}, ${location.region} | Indivio Studio`;
+    const description = `Looking for elite web development, mobile apps, and ${location.focus.toLowerCase()} software in ${location.name}? Indivio Studio delivers world-class digital solutions. ${location.shortDescription}`;
+    const url = `${siteConfig.url}/locations/${location.slug}`;
 
     return {
         title,
@@ -37,7 +38,7 @@ export async function generateMetadata({
             description,
             url,
             type: 'website',
-            images: [{ url: '/images/indivio.png', width: 1200, height: 630, alt: title }],
+            images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: title }],
         },
     };
 }
@@ -53,22 +54,23 @@ export default async function LocationPage({
     if (!location) notFound();
 
     const features = [
-        `Custom Website Design for ${location.name} businesses`,
-        `${location.focus} management systems & ERPs`,
-        `Local SEO optimization for the ${location.region} market`,
-        `Fast, secure, and mobile-friendly web applications`
+        `Custom Web & App Engineering for ${location.name} businesses`,
+        `${location.focus} management systems & school ERPs`,
+        `Local SEO & High-Performance architecture for ${location.region}`,
+        `Fast, secure, production-grade cloud deployments`
     ];
 
     // Schema for SEO Local targeting
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `Web Development Services in ${location.name}`,
+        name: `Software & Web Development Services in ${location.name}`,
         description: location.shortDescription,
         provider: {
             '@type': 'LocalBusiness',
-            name: 'Indivio',
-            image: 'https://indivio.in/images/logo.png',
+            name: siteConfig.name,
+            image: `${siteConfig.url}/images/logo.png`,
+            telephone: siteConfig.phone,
             areaServed: {
                 '@type': 'City',
                 name: location.name,
@@ -103,12 +105,12 @@ export default async function LocationPage({
                     </Reveal>
                     <Reveal delay={0.1}>
                         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
-                            Premium Digital Solutions for <span className="gradient-text">{location.name}</span>
+                            Digital Product Engineering for <span className="gradient-text">{location.name}</span>
                         </h1>
                     </Reveal>
                     <Reveal delay={0.2}>
                         <p className="text-lg text-muted mb-10 max-w-2xl mx-auto">
-                            Empowering {location.focus.toLowerCase()} and local enterprises from our roots in Bihar all the way to {location.name}. {location.shortDescription}
+                            Empowering {location.focus.toLowerCase()} and forward-thinking enterprises with modern software, mobile apps, and ERPs. {location.shortDescription}
                         </p>
                     </Reveal>
                     <Reveal delay={0.3}>
@@ -132,9 +134,9 @@ export default async function LocationPage({
                             <Reveal>
                                 <h2 className="text-3xl font-semibold mb-6">Built for the {location.name} Market</h2>
                                 <p className="text-muted leading-relaxed mb-8">
-                                    You don't need to hire agencies in expensive metro cities to get world-class software. 
-                                    Indivio brings premium web development, SaaS platforms, and digital transformation directly to {location.name}. 
-                                    We deeply understand the needs of {location.focus.toLowerCase()} operating in {location.region}.
+                                    You don&apos;t need to hire agencies in expensive metro cities to get world-class software. 
+                                    Indivio Studio brings premium web development, SaaS platforms, native mobile apps, and coaching ERPs directly to {location.name}. 
+                                    We deeply understand the operational needs of {location.focus.toLowerCase()} in {location.region}.
                                 </p>
                             </Reveal>
                             <StaggerContainer className="flex flex-col gap-4">
@@ -154,7 +156,7 @@ export default async function LocationPage({
                                 <div className="relative z-10">
                                     <MapPin className="w-16 h-16 text-[var(--accent)] mb-6 mx-auto opacity-80" />
                                     <h3 className="text-2xl font-bold mb-2">Ready to scale in {location.name}?</h3>
-                                    <p className="text-muted text-sm max-w-xs mx-auto mb-6">Join organizations across India who trust Indivio for their technology needs.</p>
+                                    <p className="text-muted text-sm max-w-xs mx-auto mb-6">Join organizations across India who trust Indivio Studio for their technology needs.</p>
                                     <Button asChild>
                                         <Link href="/contact">
                                             Start Your Project <ArrowRight className="w-4 h-4 ml-2" />

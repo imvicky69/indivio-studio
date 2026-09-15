@@ -46,14 +46,14 @@ const contactMethods = [
         icon: MessageCircle,
         title: 'WhatsApp',
         value: 'Chat with us',
-        href: 'https://wa.me/919798836199?text=Hi%20Indivio%2C%20I%27m%20interested%20in%20your%20services.',
+        href: 'https://wa.me/919798836199?text=Hi%20Indivio%20Studio%2C%20I%27m%20interested%20in%20your%20services.',
         accent: true,
     },
     {
         icon: Mail,
         title: 'Email',
-        value: 'indivio.in@gmail.com',
-        href: 'mailto:indivio.in@gmail.com',
+        value: 'hello@indivio.in',
+        href: 'mailto:hello@indivio.in',
     },
     {
         icon: MapPin,
@@ -286,8 +286,8 @@ function ContactForm() {
 
                             <p className="text-xs text-muted text-center">
                                 Or email us directly at{' '}
-                                <Link href="mailto:indivio.in@gmail.com" className="text-foreground underline underline-offset-2">
-                                    indivio.in@gmail.com
+                                <Link href="mailto:hello@indivio.in" className="text-foreground underline underline-offset-2">
+                                    hello@indivio.in
                                 </Link>
                             </p>
                         </form>

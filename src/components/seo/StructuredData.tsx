@@ -1,18 +1,22 @@
+import { siteConfig } from '@/lib/siteConfig';
+
 export function StructuredData() {
     const localBusiness = {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
-        name: 'Indivio',
-        description: 'Custom software development, web apps, and school management systems built for performance and growth.',
-        url: 'https://indivio.in',
-        email: 'hello@indivio.in',
-        logo: 'https://indivio.in/images/logo.png',
-        image: 'https://indivio.in/images/indivio.png',
+        name: siteConfig.name,
+        legalName: siteConfig.legalName,
+        description: siteConfig.description,
+        url: siteConfig.url,
+        email: siteConfig.email,
+        logo: `${siteConfig.url}/images/logo.png`,
+        image: `${siteConfig.url}/images/indivio.png`,
+        telephone: siteConfig.phone,
         address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Nirmali',
-            addressRegion: 'Bihar',
-            addressCountry: 'IN',
+            addressLocality: siteConfig.address.locality,
+            addressRegion: siteConfig.address.region,
+            addressCountry: siteConfig.address.country,
         },
         areaServed: [
             {
@@ -22,42 +26,61 @@ export function StructuredData() {
             {
                 '@type': 'State',
                 name: 'Bihar',
+            },
+            {
+                '@type': 'State',
+                name: 'Jharkhand',
+            },
+            {
+                '@type': 'State',
+                name: 'Uttar Pradesh',
             }
         ],
         serviceType: [
-            'Software Development',
+            'Digital Product Studio',
+            'Custom Software Development',
+            'Native Mobile App Development',
             'Web Application Development',
-            'School Management Software',
+            'School Management Software ERP',
+            'Coaching Institute Management Apps',
             'E-Commerce Development',
-            'Small Business IT Solutions',
+            'UI/UX Design',
         ],
         priceRange: '₹15,000 - ₹2,00,000+',
         knowsLanguage: ['English', 'Hindi'],
         sameAs: [
-            'https://wa.me/919798836199',
+            siteConfig.socialLinks.whatsapp,
+            siteConfig.socialLinks.github,
         ],
     };
 
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'Indivio',
-        url: 'https://indivio.in',
-        logo: 'https://indivio.in/images/logo.png',
-        description: 'Indivio specializes in custom software development, school management systems (ERP), and web apps for small businesses. Based in Nirmali, Bihar, serving all over India.',
+        name: siteConfig.name,
+        alternateName: ['Indivio Studio India', 'Indivio Software Studio'],
+        url: siteConfig.url,
+        logo: `${siteConfig.url}/images/logo.png`,
+        description: siteConfig.description,
         foundingLocation: {
             '@type': 'Place',
             address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Nirmali',
-                addressRegion: 'Bihar',
-                addressCountry: 'IN',
+                addressLocality: siteConfig.address.locality,
+                addressRegion: siteConfig.address.region,
+                addressCountry: siteConfig.address.country,
             }
+        },
+        founder: {
+            '@type': 'Person',
+            name: 'Vikky Raja',
+            jobTitle: 'Founder & Lead Software Engineer',
         },
         contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'customer support',
-            email: 'hello@indivio.in',
+            email: siteConfig.email,
+            telephone: siteConfig.phone,
             availableLanguage: ['English', 'Hindi']
         }
     };
@@ -65,15 +88,16 @@ export function StructuredData() {
     const websiteSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'Indivio',
-        url: 'https://indivio.in',
-        description: 'Custom websites, web apps, and school management systems built for performance. Based in India.',
+        name: siteConfig.name,
+        alternateName: 'Indivio Studio',
+        url: siteConfig.url,
+        description: siteConfig.description,
         publisher: {
             '@type': 'Organization',
-            name: 'Indivio',
+            name: siteConfig.name,
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://indivio.in/images/logo.png',
+                url: `${siteConfig.url}/images/logo.png`,
             },
         },
     };
@@ -82,11 +106,13 @@ export function StructuredData() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://indivio.in' },
-            { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://indivio.in/services' },
-            { '@type': 'ListItem', position: 3, name: 'Pricing', item: 'https://indivio.in/pricing' },
-            { '@type': 'ListItem', position: 4, name: 'Blog', item: 'https://indivio.in/blog' },
-            { '@type': 'ListItem', position: 5, name: 'Contact', item: 'https://indivio.in/contact' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+            { '@type': 'ListItem', position: 2, name: 'About', item: `${siteConfig.url}/about` },
+            { '@type': 'ListItem', position: 3, name: 'Services', item: `${siteConfig.url}/services` },
+            { '@type': 'ListItem', position: 4, name: 'Showcase', item: `${siteConfig.url}/showcase` },
+            { '@type': 'ListItem', position: 5, name: 'Pricing', item: `${siteConfig.url}/pricing` },
+            { '@type': 'ListItem', position: 6, name: 'Blog', item: `${siteConfig.url}/blog` },
+            { '@type': 'ListItem', position: 7, name: 'Contact', item: `${siteConfig.url}/contact` },
         ],
     };
 
@@ -96,50 +122,42 @@ export function StructuredData() {
         mainEntity: [
             {
                 '@type': 'Question',
-                name: 'How much does a website cost?',
+                name: 'What services does Indivio Studio provide?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'A basic business website starts from ₹15,000. Custom web applications with advanced features are quoted individually based on scope. We always provide a transparent estimate before starting.',
+                    text: 'Indivio Studio is a full-service digital product engineering studio. We build custom websites, high-performance web applications, native Android/iOS mobile apps, complete school & coaching ERP platforms, and custom business software.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'How long does it take?',
+                name: 'How much does a project cost with Indivio Studio?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'A typical business website takes 2-4 weeks. More complex projects like web apps or school management systems can take 4-8 weeks.',
+                    text: 'A basic business website starts from ₹15,000. Custom web applications and mobile apps are quoted transparently based on project requirements and scope with no hidden charges.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'Do you provide hosting and maintenance?',
+                name: 'How long does a development project take?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Yes. We offer affordable monthly plans that include hosting, security updates, backups, and technical support.',
+                    text: 'Standard business websites take 2-4 weeks. Complex digital products such as native mobile apps, custom SaaS platforms, or school management ERPs take 4-8 weeks.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'Can you redesign my existing website?',
+                name: 'Do you provide hosting, maintenance, and support?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: "Absolutely. We frequently modernize existing sites. We'll audit your current site, understand your goals, and deliver a fresh, high-performing redesign.",
+                    text: 'Yes. Indivio Studio provides complete deployment, high-speed cloud hosting, ongoing maintenance, security updates, and dedicated technical support.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'Do you work with clients outside India?',
+                name: 'Do you work with clients across India and globally?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: "Yes. While we're based in India, we work with clients globally. Our structured process makes remote collaboration seamless across time zones.",
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'What if I need changes after delivery?',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'We include a revision period with every project. After launch, you can request changes through our maintenance plans or reach out for one-time updates.',
+                    text: 'Yes! While founded in Nirmali, Bihar, Indivio Studio serves clients across tier 1, tier 2, and tier 3 cities in India as well as international clients.',
                 },
             },
         ],
